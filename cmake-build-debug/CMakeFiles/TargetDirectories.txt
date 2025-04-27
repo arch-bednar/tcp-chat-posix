@@ -1,0 +1,3 @@
+/Users/admin/Documents/tcp-chat-posix/cmake-build-debug/CMakeFiles/tcp_chat_posix.dir
+/Users/admin/Documents/tcp-chat-posix/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/admin/Documents/tcp-chat-posix/cmake-build-debug/CMakeFiles/rebuild_cache.dir

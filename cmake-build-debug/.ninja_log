@@ -1,0 +1,9 @@
+# ninja log v6
+0	48	1745702654418239404	CMakeFiles/tcp_chat_posix.dir/main.c.o	199be9cb3a318163
+49	82	1745702654466520683	tcp_chat_posix	b31922b20dae2c7b
+6	134	1745706234127763713	CMakeFiles/tcp_chat_posix.dir/client.c.o	38923c8aace1f0b
+4	155	1745706234126267538	CMakeFiles/tcp_chat_posix.dir/main.c.o	199be9cb3a318163
+1	35	1745706280034280844	CMakeFiles/tcp_chat_posix.dir/server.c.o	de71cd81f7418820
+35	177	1745706280068124297	tcp_chat_posix	557f1703375a6af4
+1	32	1745706299584183669	CMakeFiles/tcp_chat_posix.dir/main.c.o	199be9cb3a318163
+32	66	1745706299615072960	tcp_chat_posix	557f1703375a6af4
