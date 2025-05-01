@@ -3,6 +3,10 @@
 //
 
 #ifndef CLIENT_H
+#include <netinet/in.h>
+int createSocket(int *sockfd, struct sockaddr_in *addr, int port);
+void start(int port);
+
 #define CLIENT_H
 
 #endif //CLIENT_H

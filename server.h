@@ -4,13 +4,15 @@
 
 #ifndef SERVER_H
 #define SERVER_H
+#include <netinet/in.h>
+
 typedef struct t_user t_user;
 //table of file descriptors of hosts
 
 
-int createSocket(struct sockaddr_in sock);
+int createSocket(int *sockfd, struct sockaddr_in *addr);
 int bindSocket(int sockfd, const struct sockaddr *addr);
 void closeConnection();
 void start();
-void beginListening();
+void handleUser();
 #endif //SERVER_H
