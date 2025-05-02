@@ -5,7 +5,7 @@
 #ifndef CLIENT_H
 #include <netinet/in.h>
 int createSocket(int *sockfd, struct sockaddr_in *addr, int port);
-void start(int port);
+void start(char port[]);
 
 #define CLIENT_H
 

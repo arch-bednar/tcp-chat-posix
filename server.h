@@ -11,8 +11,9 @@ typedef struct t_user t_user;
 
 
 int createSocket(int *sockfd, struct sockaddr_in *addr);
-int bindSocket(int sockfd, const struct sockaddr *addr);
-void closeConnection();
+int bindSocket(int sockfd, struct sockaddr_in *addr);
+void closeConnection(int sockfd);
 void start();
-void handleUser();
+void *handleUser(void * user);
+void closeSockets();
 #endif //SERVER_H
