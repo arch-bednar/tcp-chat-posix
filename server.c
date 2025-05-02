@@ -11,6 +11,7 @@
 #include <stdbool.h>
 #include <pthread.h>
 #include <stdlib.h>
+#include <string.h>
 
 struct t_user {
     char name[100]; //name
@@ -68,17 +69,35 @@ void *handleUser(void * user) {
     bool flag = true;
     t_user * client = (t_user*) user;
 
+    char buffer[100];
+    char message[1000];
+
+    char name[30], nickname[30];
+
+    do {
+        strcpy(message, "Enter your name: ");
+        send(client->sockfd, message, sizeof(message), MSG_CONFIRM);
+        recv(client->sockfd, buffer, sizeof(buffer), MSG_CONFIRM);
+
+        strcpy(message, "Enter your nickname: ");
+        send(client->sockfd, message, sizeof(message), MSG_CONFIRM);
+        recv(client->sockfd, buffer, sizeof(buffer), MSG_CONFIRM);
+
+    }while(client->name[0] == '\0' && );
+
+
     while(flag) {
         if (client->name[0] == '\0' ) {
             char name[100], nickname[100];
             ssize_t bytes = 0;
-            char buffer[100];
             char message[] = "Enter your name: ";
 
             send(client->sockfd, message, sizeof(message), 0);
             bytes = recv(client->sockfd, buffer, sizeof(buffer), 0);
             if (bytes == -1) {
-                perror("Socke")
+                perror("Socket error");
+            }else if (bytes == 0) {
+                perror("");
             }
 
         }
